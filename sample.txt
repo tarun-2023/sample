@@ -1,2 +1,3 @@
 First sentence
 Making a new commit
+This is the new change
