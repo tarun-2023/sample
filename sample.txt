@@ -1,14 +1,11 @@
 public class SecondLargestElement {
     public static int findSecondLargest(int[] arr) {
-        int largest = Integer.MIN_VALUE;
+        int largest = arr[0]; // Assume the first element is the largest
         int secondLargest = Integer.MIN_VALUE;
 
-        for (int num : arr) {
-            if (num > largest) {
-                secondLargest = largest;
-                largest = num;
-            } else if (num > secondLargest && num != largest) {
-                secondLargest = num;
+        for (int i = 1; i < arr.length; i++) { // Start from the second element
+            if (arr[i] < largest) { // Incorrect condition
+                secondLargest = arr[i]; // Assign the smaller element as secondLargest
             }
         }
 
